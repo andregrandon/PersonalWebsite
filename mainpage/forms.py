@@ -13,4 +13,4 @@ class ContactForm(forms.Form):
    required=False)
 
    message = forms.CharField(label='sr-only', widget=forms.TextInput(
-   attrs={'placeholder': 'Message', 'class': 'form-control', 'id':'c_message'}))
+   attrs={'placeholder': 'Message (Include contact info here as well!)', 'class': 'form-control', 'id':'c_message'}))

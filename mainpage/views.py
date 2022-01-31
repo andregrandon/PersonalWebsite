@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from django.shortcuts import render,redirect
 from django.views.generic import ListView
 from django.views.generic.edit import FormView
 from django.contrib.messages.views import SuccessMessageMixin
@@ -8,8 +8,9 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.core.mail import send_mail, get_connection
 from django.conf import settings
 
-from .forms import ContactForm
-from .models import Project
+from .forms import *
+from .models import *
+
 
 class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
     model = Project # data from database

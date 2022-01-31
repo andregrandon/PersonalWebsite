@@ -288,7 +288,11 @@ input:nth-child(3n){
 	height: 1px;
 	margin: 30px auto;
 }
-
+.row{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 #myphoto {
 	margin-top: 10vh;
 	border-radius: 100%;
