@@ -26,7 +26,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DEBUG', False) )
 
-ALLOWED_HOSTS =  ['andregrandon.herokuapp.com','127,0,0.1']
+ALLOWED_HOSTS =  ['andregrandon.herokuapp.com','198.211.99.20', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -131,5 +131,5 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 EMAIL_USE_TLS = True
 EMAIL_HOST ='smtp.gmail.com'
 EMAIL_HOST_USER = '22agrandon@gmail.com'
-EMAIL_HOST_PASSWORD = '*****'
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
