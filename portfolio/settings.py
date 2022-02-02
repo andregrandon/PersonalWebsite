@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool( os.environ.get('DEBUG', False) )
+DEBUG = bool( os.environ.get('DEBUG', True) )
 
 ALLOWED_HOSTS =  ['andregrandon.herokuapp.com','198.211.99.20', 'localhost', '127.0.0.1']
 
@@ -168,5 +168,5 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 EMAIL_USE_TLS = True
 EMAIL_HOST ='smtp.gmail.com'
 EMAIL_HOST_USER = '22agrandon@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_PASSWORD = "EMAIL_HOST_PASSWORD"
 EMAIL_PORT = 587
