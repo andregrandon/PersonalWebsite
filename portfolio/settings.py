@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool( os.environ.get('DEBUG', False) )
+DEBUG = bool( os.environ.get('DEBUG', True) )
 
-ALLOWED_HOSTS =  ['andregrandon.herokuapp.com','198.211.99.20', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS =  ['198.211.99.20', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

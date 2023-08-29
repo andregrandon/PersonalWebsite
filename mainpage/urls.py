@@ -1,6 +1,6 @@
-from django.conf.urls import url
+from django.urls import include, re_path
 from .views import ProjectListAndFormView
 
 urlpatterns = [
-    url(r'^$', ProjectListAndFormView.as_view(), name='main')
+    re_path(r'^$', ProjectListAndFormView.as_view(), name='main')
 ]
