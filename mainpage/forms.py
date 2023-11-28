@@ -5,12 +5,20 @@ from django.forms.widgets import TextInput
 from django import forms
 
 class ContactForm(forms.Form):
-   name = forms.CharField(label='sr-only', widget=forms.TextInput(
-   attrs={'placeholder': 'Name', 'class': 'form-control', 'id':'c_name'}))
+    name = forms.CharField(
+        label='sr-only',
+        widget=forms.TextInput(attrs={'placeholder': 'Name', 'class': 'form-control', 'id': 'c_name'})
+    )
 
-   email = forms.CharField(label='sr-only', widget=forms.TextInput(
-     attrs={'placeholder': 'Subject', 'class': 'form-control', 'id':'c_email'}),
-     required=False)
+    email = forms.CharField(
+        label='sr-only',
+        widget=forms.TextInput(attrs={'placeholder': 'Email', 'class': 'form-control', 'id': 'c_email'}),
+        required=False
+    )
 
-   message = forms.CharField(label='sr-only', widget=forms.TextInput(
-   attrs={'placeholder': 'Message/Email', 'class': 'form-control', 'id':'c_message'}))
+    message = forms.CharField(
+    label='sr-only',
+    widget=forms.Textarea(attrs={'placeholder': 'Message', 'class': 'form-control', 'id': 'c_message', 'style': 'resize: both;'})
+)
+
+
