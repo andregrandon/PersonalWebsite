@@ -166,7 +166,7 @@ h6 {
 }
 
 input:nth-child(3n){
-    height: 500px%;
+    height: 500px;
 }
 
 /* ---------------------------------------------- /*
@@ -409,7 +409,7 @@ div[class^="devicon"] span{
 
 .home-overlay {
     background-color: rgba(44, 62, 80, 0.3);
-    background-image: url("../images/pattern.png");
+   
     background-repeat: repeat;
     height: 100%;
     left: 0;
